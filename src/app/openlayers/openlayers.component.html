@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>GéoCollab</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/assets/placeholder.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+    <mat-toolbar color="primary">
+        <!-- TOOLBAR -->
+        <button mat-icon-button class="example-icon" aria-label="Menu" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>GéoCollab</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Home">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Share">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar>
+      
+      <!-- SIDENAV -->
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" opened>
+          <!-- Contenu de votre Sidenav ici -->
+          <p>Contenu de la Sidenav</p>
+        </mat-sidenav>
+      </mat-sidenav-container>
+      
+      <div id="map"></div>
+      
+    <router-outlet></router-outlet>
+
+    <app-root></app-root>
+
+</body>
+</html>
